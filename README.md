@@ -89,21 +89,7 @@ The full diagnostic set (131 frames covering frame 0, every frame from 300 onwar
 
 ```bash
 python -m pip install -r requirements.txt
-python main.py --video box_video_data.avi --output-dir outputs
-```
-
-The default run opens the first frame twice and asks you to click the tracked corners **in order**; press **ENTER** to confirm each set. It then plays back the tracking live, writes augmented videos and debug frames under the selected output directory, and saves `eqm_comparison.png`.
-
-Multiple sequences can be processed in one run. Use `--video` repeatedly or pass several paths after one option; optional labels are supplied in the same order with repeated `--video-label` options:
-
-```bash
-python main.py --no-display --video main_sequence.avi hq_sequence.avi `
-  --video-label main_sequence --video-label hq_sequence
-```
-
-The run saves one line chart per sequence (`eqm_comparison*.png`) and a grouped summary bar chart (`eqm_summary.png`).
-
-For reproducible headless runs, pass the initial points as `x,y` pairs separated by semicolons:
+python main.py --video box_video_data.avi --video box_video_lowFPS.avi --video-label Original --video-label LowFPS 
 
 ```bash
 python main.py --no-display --max-frames 50 `
