@@ -1,0 +1,11 @@
+python main.py --video box_video_data.avi --video box_video_lowFPS.avi --video-label Original --video-label LowFPS 
+
+python main.py --video box_video_data.avi --output-dir outputs
+
+python main.py --no-display --max-frames 50 --points-4 "148,253;396,243;379,359;171,373" --points-6 "148,253;396,243;379,359;171,373;160,180;372,172"
+
+python main.py --no-display --video box_video_data.avi box_video_blur.avi --video-label main_sequence --video-label blurred_sequence --points-4 "148,253;396,243;379,359;171,373" --points-6 "148,253;396,243;379,359;171,373;160,180;372,172"
+
+python main.py --no-display --video box_video_data.avi --video box_video_lowfps.avi --video-label main --video-label lowfps --points-4 "148,253;396,243;379,359;171,373" --points-6 "148,253;396,243;379,359;171,373;160,180;372,172"
+
+python main.py --no-display --sensitivity --video box_video_data.avi --points-4 "148,253;396,243;379,359;171,373" --points-6 "148,253;396,243;379,359;171,373;160,180;372,172"
